@@ -1164,7 +1164,7 @@ ARG LARADOCK_PHALCON_VERSION
 ENV LARADOCK_PHALCON_VERSION ${LARADOCK_PHALCON_VERSION}
 
 RUN if [ $INSTALL_PHALCON = true ]; then \
-    apt-get update && apt-get install -y unzip libpcre3-dev gcc make re2c git automake autoconf\
+    apt-get update && apt-get install -y unzip libpcre3-dev gcc make re2c git automake autoconf \
     && git clone https://github.com/jbboehr/php-psr.git \
     && cd php-psr \
     && phpize \
