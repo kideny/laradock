@@ -827,11 +827,7 @@ ENV LARADOCK_PHALCON_VERSION ${LARADOCK_PHALCON_VERSION}
 COPY ./phalcon.ini /usr/local/etc/php/conf.d/phalcon.ini.disable
 
 RUN if [ $INSTALL_PHALCON = true ]; then \
-<<<<<<< HEAD
-    apt-get install -yqq unzip libpcre3-dev gcc make re2c git automake autoconf\
-=======
     apt-get update && apt-get install -y unzip libpcre3-dev gcc make re2c git automake autoconf \
->>>>>>> 1e7f4ab (udpate)
     && git clone https://github.com/jbboehr/php-psr.git \
     && cd php-psr \
     && phpize \
